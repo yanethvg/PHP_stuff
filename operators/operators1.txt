@@ -1,0 +1,15 @@
+Operandos
+
+Unarios Operando Operador u Operador Operando
+
+Binarios Operando1 Operador Operando2
+
+Ternario Operando1 Operador Operando2 Operador Operando3
+
+
+Unarios -5
+
+Binarios 10 +12
+
+#el unico que existe en php
+Ternario true?'Hola':'Adios'
