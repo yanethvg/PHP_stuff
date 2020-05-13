@@ -1,6 +1,7 @@
 <?php
-require_once('persona.php');
-class Provider extends Person{
+namespace controller;
+require_once('person.php');
+class Provider extends \Person{
   private $account;
   private $bank;
 

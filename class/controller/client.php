@@ -1,6 +1,13 @@
 <?php
-require_once('persona.php');
-class Client extends Person{
+#agregando el namespace
+namespace controller;
+
+require_once('person.php');
+require_once('operation.php');
+require_once('emplotee.php');
+# se coloca \ para evitar que busque dentro de controller estas clases
+class Client extends \Person{
+  use \Operation;
   private $common;
   private $correo;
 
@@ -48,8 +55,16 @@ class Client extends Person{
     function run(){
       echo "Cliente corriendo";
     }
+
+    function say(\Emplotee $employee){
+      echo "{$this->getName()} felicitame al chef {$employee->getName()}";
+    }
     function __destruct(){
       echo 'Limpieza';
+    }
+
+    function pay(){
+      echo 'El dinero que gaste fue: '.$this->plus(89,17);
     }
 
 }
